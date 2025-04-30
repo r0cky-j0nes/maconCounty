@@ -1,0 +1,253 @@
+/* style.css */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  header {
+    background-color: #1D4E89;
+    color: white;
+  }
+  
+  .navbar {
+    background-color: #1D4E89;
+    height: fit-content;
+  }
+  
+  .navbar-brand img {
+    height: 50px;
+  }
+  
+  .navbar-nav .nav-link {
+    color: white;
+    padding: 0.75rem 0;
+    font-size: 20px;
+
+  }
+  
+  .navbar-nav .nav-link:hover {
+    background-color: #A3C644;
+  }
+  .navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* Optional: aligns dropdown flush with nav */
+  }
+
+  li.nav-item{
+    height: 50px;
+    width: auto;
+  }
+  
+ 
+  
+  .footer {
+    background-color: #333333;
+    color: white;
+    padding: 2rem 0;
+  }
+  
+  .mcFlag {
+    height: 40px;
+    width: auto;
+
+  }
+  .navbar-brand {
+    align-self: flex-start;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .hero-image img {
+    max-height: 350px; 
+    object-fit: cover;
+    display: block;
+  }
+
+  .emergency-banner {
+    background-color: #A3C644; 
+  }
+  .emergency-banner h2,
+  .emergency-banner p {
+    margin: 0;
+  }
+
+  .quick-links-banner a:hover {
+    text-decoration: underline;
+  }
+  
+
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .carousel-control-prev,
+.carousel-control-next {
+  filter: invert(1); 
+}
+
+#newsCarousel{
+    margin: 30px 50px 50px 50px;
+}
+/* calendar */
+
+#calendar {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 1rem;
+  overflow: hidden;
+  margin: 50px 50px 50px 50px;
+}
+
+/* Header Title */
+.fc-toolbar-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Button Styles */
+  .fc-button {
+    background-color: #0d6efd;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 0.375rem;
+    margin: 0 0.25rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .fc-button:hover {
+    background-color: #0b5ed7;
+  }
+  
+  /* Today’s Date Highlight */
+  .fc-day-today {
+    background-color: rgba(13, 110, 253, 0.15);
+  }
+  
+  /* Events */
+  .fc-event {
+    background-color: #0d6efd;
+    border: none;
+    font-size: 0.85rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+  }
+  
+  /* Date Grid Styling */
+  .fc-daygrid-day-number {
+    font-weight: bold;
+    color: #555;
+  }
+
+
+  /* Resources secion*/
+  .resources-section {
+    border-top: 1px solid #ddd;
+    background-color: #A3C644 !important;
+  }
+  
+  .resources-section h2 {
+    font-weight: 600;
+    color: #333;
+  }
+
+  .mcSeal{
+    max-height: 100px;
+    width: auto;
+    margin: 0;
+  }
+
+  /* sect cards*/
+  .info-card {
+    position: relative;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .info-card:hover .info-overlay {
+    background-color: #A3C644cc; /* Hover overlay */
+  }
+  
+  .info-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Default overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+  }
+/*quick links*/
+.quick-links {
+  background-color: #004b8d;
+  border-radius: 0.25rem;
+}
+.quick-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.quick-links li {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.quick-links a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+.quick-links a:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+/*hero*/
+.hero {
+  position: relative;
+  width: 100%;
+  height: 300px;              /* adjust height as you like */
+  background-size: cover;     /* ensure it fills the box */
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  bottom: 20px;               /* distance from bottom */
+  left: 20px;                 /* distance from left edge */
+  color: #fff;                /* white text */
+  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 200px;            /* shorter on mobile */
+  }
+  .hero-overlay h1 {
+    font-size: 1.5rem;
+  }
+}
+/*footer*/
+.footer-icon {
+  font-size: 1.5rem;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.footer-icon:hover {
+  color: #A3C644; /* Macon County green accent */
+}

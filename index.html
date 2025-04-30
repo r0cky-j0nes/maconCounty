@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <title>Macon County, NC</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100">
+      <div class="container-fluid flex-column p-0">
+  
+        <!-- 1: Top row – Brand, Search & Toggler -->
+        <div class="d-flex justify-content-between align-items-center w-100 py-2 px-3">
+          <!-- Brand -->
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img class="mcFlag me-2" src="img/mcFlag.gif" alt="Macon County Flag">
+            <span class="fw-bold text-white">Macon County, NC</span>
+          </a>
+  
+          <!-- Search (desktop only) -->
+          <form class="d-none d-md-flex" role="search">
+            <input class="form-control form-control-sm" type="search" placeholder="Search..." aria-label="Search">
+            <button class="btn btn-outline-light btn-sm ms-2" type="submit">Search</button>
+          </form>
+  
+          <!-- Mobile Toggle -->
+          <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+  
+        <!-- 2: Bottom row – Nav links full width -->
+        <div class="collapse navbar-collapse w-100" id="navbarNav">
+          <ul class="navbar-nav d-flex w-100 justify-content-between">
+  
+            <!-- Home -->
+            <li class="nav-item flex-fill text-center">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+  
+            <!-- Government Dropdown -->
+            <li class="nav-item dropdown flex-fill text-center">
+              <a class="nav-link dropdown-toggle" href="#" id="govDropdown" data-bs-toggle="dropdown">
+                Government
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="govDropdown">
+                <li><a class="dropdown-item" href="gov-overview.html">Overview</a></li>
+                <li><a class="dropdown-item" href="gov-commission.html">Commission</a></li>
+                <li><a class="dropdown-item" href="gov-agendas.html">Meeting Agendas &amp; Minutes</a></li>
+                <li><a class="dropdown-item" href="gov-budgets.html">Budgets</a></li>
+                <li><a class="dropdown-item" href="gov-mayor.html">Mayor’s Office</a></li>
+                <li><a class="dropdown-item" href="gov-staff.html">Staff Directory</a></li>
+                <li><a class="dropdown-item" href="gov-contacts.html">Contact Info</a></li>
+              </ul>
+            </li>
+  
+            <!-- Services Dropdown -->
+            <li class="nav-item dropdown flex-fill text-center">
+              <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" data-bs-toggle="dropdown">
+                Services
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <li><a class="dropdown-item" href="svc-overview.html">Overview</a></li>
+                <li><a class="dropdown-item" href="svc-paybill.html">Pay a Bill</a></li>
+                <li><a class="dropdown-item" href="svc-permits.html">Permits</a></li>
+                <li><a class="dropdown-item" href="svc-utilities.html">Utilities</a></li>
+                <li><a class="dropdown-item" href="svc-health.html">Health</a></li>
+                <li><a class="dropdown-item" href="svc-safety.html">Public Safety</a></li>
+                <li><a class="dropdown-item" href="svc-social.html">Social Services</a></li>
+              </ul>
+            </li>
+  
+            <!-- Community Dropdown -->
+            <li class="nav-item dropdown flex-fill text-center">
+              <a class="nav-link dropdown-toggle" href="#" id="communityDropdown" data-bs-toggle="dropdown">
+                Community
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="communityDropdown">
+                <li><a class="dropdown-item" href="community-overview.html">Overview</a></li>
+                <li><a class="dropdown-item" href="community-events.html">Events</a></li>
+                <li><a class="dropdown-item" href="community-groups.html">Community Groups</a></li>
+                <li><a class="dropdown-item" href="community-volunteer.html">Volunteer</a></li>
+                <li><a class="dropdown-item" href="community-contacts.html">Contact Information</a></li>
+                <li><a class="dropdown-item" href="community-resources.html">Resources</a></li>
+                <li><a class="dropdown-item" href="community-news.html">News</a></li>
+              </ul>
+            </li>
+  
+            <!-- Visitors Dropdown -->
+            <li class="nav-item dropdown flex-fill text-center">
+              <a class="nav-link dropdown-toggle" href="#" id="visitorsDropdown" data-bs-toggle="dropdown">
+                Visitors
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="visitorsDropdown">
+                <li><a class="dropdown-item" href="visitors-overview.html">Overview</a></li>
+                <li><a class="dropdown-item" href="visitors-activities.html">Activities</a></li>
+                <li><a class="dropdown-item" href="visitors-accommodations.html">Accommodations</a></li>
+                <li><a class="dropdown-item" href="visitors-dining.html">Dining</a></li>
+                <li><a class="dropdown-item" href="visitors-attractions.html">Attractions</a></li>
+                <li><a class="dropdown-item" href="visitors-guides.html">Visitor Guides</a></li>
+                <li><a class="dropdown-item" href="visitors-tips.html">Visitor Tips</a></li>
+              </ul>
+            </li>
+  
+            <!-- Business Dropdown -->
+            <li class="nav-item dropdown flex-fill text-center">
+              <a class="nav-link dropdown-toggle" href="#" id="businessDropdown" data-bs-toggle="dropdown">
+                Business
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="businessDropdown">
+                <li><a class="dropdown-item" href="business-overview.html">Overview</a></li>
+                <li><a class="dropdown-item" href="business-opportunities.html">Opportunities</a></li>
+                <li><a class="dropdown-item" href="business-register.html">Business Registration</a></li>
+                <li><a class="dropdown-item" href="business-support.html">Business Support</a></li>
+                <li><a class="dropdown-item" href="business-permits.html">Permits</a></li>
+                <li><a class="dropdown-item" href="business-directory.html">Business Directory</a></li>
+                <li><a class="dropdown-item" href="business-smallbusiness.html">Small Businesses</a></li>
+              </ul>
+            </li>
+  
+            <!-- Contact -->
+            <li class="nav-item flex-fill text-center">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+  
+          </ul>
+        </div>
+  
+      </div>
+    </nav>
+  </header>
+  
+  <main>
+
+    <!--HERO IMG-->
+
+    <section class="hero-image">
+      <img src="img/hero.png" alt="Macon County Hero Image" class="img-fluid w-100">
+    </section>
+                
+    <!--Sign up for Alerts-->
+
+    <section class="emergency-banner text-white py-3">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center text-center text-md-start">
+        <p class="mb-2 mb-md-0 fw-bold">
+          Stay Informed During Emergencies — Sign up for real-time alerts from Macon County.
+        </p>
+        <a href="#" class="btn btn-light btn-lg fw-bold">Sign Up</a>
+      </div>
+    </section>
+
+    <!--Quick links-->
+
+    <section class="quick-links-banner bg-light py-4">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-6 col-md">
+            <a href="#" class="text-dark text-decoration-none d-block mb-2 fw-bold">
+              <i class="fas fa-file-invoice-dollar me-1"></i> Pay a Bill
+            </a>
+          </div>
+          <div class="col-6 col-md">
+            <a href="#" class="text-dark text-decoration-none d-block mb-2 fw-bold">
+              <i class="fas fa-briefcase me-1"></i> City Jobs
+            </a>
+          </div>
+          <div class="col-6 col-md">
+            <a href="#" class="text-dark text-decoration-none d-block mb-2 fw-bold">
+              <i class="fas fa-map me-1"></i> Planning & Zoning
+            </a>
+          </div>
+          <div class="col-6 col-md">
+            <a href="#" class="text-dark text-decoration-none d-block mb-2 fw-bold">
+              <i class="fas fa-tools me-1"></i> Report an Issue
+            </a>
+          </div>
+          <div class="col-6 col-md">
+            <a href="#" class="text-dark text-decoration-none d-block mb-2 fw-bold">
+              <i class="fas fa-tree me-1"></i> Parks & Rec
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--featured news carosel-->
+
+    <section class="container my-5">
+      <div class="row gx-5">
+        <!-- City Events Calendar -->
+        <div class="col-md-6 px-3">
+          <h2 class="mb-4 text-center">City Events Calendar</h2>
+          <div id="calendar" style="max-width: 100%; padding: 0 1rem;"></div>
+        </div>
+    
+        <!-- Featured News -->
+  <div class="col-md-6 px-4 d-flex flex-column">
+    <h2 class="mb-4 text-center">Featured News</h2>
+
+    <div id="newsCarousel" class="carousel slide h-100 d-flex flex-column" data-bs-ride="carousel">
+      <div class="carousel-inner flex-grow-1">
+      
+      <!-- 1st News Card -->
+        <div class="carousel-item active h-100">
+          <div class="card h-100 d-flex flex-column">
+            <div class="position-relative">
+              <img src="img/news1.png" class="card-img-top" alt="News 1">
+               <!-- Controls Positioned on Image -->
+              <button class="carousel-control-prev position-absolute top-50 start-0 translate-middle-y" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next position-absolute top-50 end-0 translate-middle-y" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">County Approves New Budget</h5>
+              <p class="card-text">Macon County commissioners approve 2025 fiscal budget with increased funding for schools and infrastructure.</p>
+            </div>
+          </div>
+        </div>
+
+      <!-- 2nd News Card -->
+      <div class="carousel-item h-100">
+        <div class="card h-100 d-flex flex-column">
+          <div class="position-relative">
+            <img src="img/news2.jpg" class="card-img-top" alt="News 2">
+            <!-- Reuse controls positioning -->
+            <button class="carousel-control-prev position-absolute top-50 start-0 translate-middle-y" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next position-absolute top-50 end-0 translate-middle-y" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">New Park Opening This Summer</h5>
+            <p class="card-text">A new recreation park is opening in Franklin with trails, picnic shelters, and sports courts.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Resources section-->
+
+<section class="resources-section py-5"> 
+  <div class="container">
+    <div class="d-flex align-items-center flex-wrap gap-3">
+      <img src="img/mcSeal.png" class="mcSeal me-3" alt="Macon County Seal">
+
+      <div class="flex-grow-1">
+        <p class="mb-1 fst-italic small">
+          Find essential services and information for residents and businesses in Macon County.
+        </p>
+
+        <div class="d-flex align-items-center flex-wrap gap-2">
+          <h2 class="mb-0 me-3">Resources</h2>
+          <a href="residents.html" class="btn btn-primary btn-sm px-3">For Residents</a>
+          <a href="businesses.html" class="btn btn-primary btn-sm px-3">For Businesses</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="info-cards py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-3">
+        <div class="info-card" style="background-image: url('img/cityhall.png');">
+          <div class="info-overlay">
+            <h5>CITY GOVERNMENT GUIDE</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="info-card" style="background-image: url('img/language.png');">
+          <div class="info-overlay">
+            <h5>LANGUAGE ACCESS</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="info-card" style="background-image: url('img/opendata.png');">
+          <div class="info-overlay">
+            <h5>OPEN DATA</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="info-card" style="background-image: url('img/thingtodo.png');">
+          <div class="info-overlay">
+            <h5>THINGS TO DO</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+ </main>
+
+ <footer class="footer bg-dark text-light py-5">
+  <div class="container">
+    <div class="row gy-4 align-items-center">
+      
+      <!-- 1. Contact Info -->
+      <div class="col-md-4 text-center text-md-start">
+        <h5 class="mb-3">Contact Us</h5>
+        <p class="mb-1">35 Institute Drive, Franklin, NC 28734</p>
+        <p class="mb-1">
+          <i class="bi bi-telephone-fill me-2"></i>
+          <a href="tel:+18281234567" class="text-light text-decoration-none">
+            (828) 123-4567
+          </a>
+        </p>
+        <p class="mb-0">
+          <i class="bi bi-envelope-fill me-2"></i>
+          <a href="mailto:info@maconnc.gov" class="text-light text-decoration-none">
+            info@maconnc.gov
+          </a>
+        </p>
+      </div>
+
+      <!-- 2. Social Links -->
+      <div class="col-md-4 text-center">
+        <h5 class="mb-3">Follow Us</h5>
+        <a href="#" class="footer-icon me-3" aria-label="Facebook">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="#" class="footer-icon me-3" aria-label="Twitter">
+          <i class="bi bi-twitter"></i>
+        </a>
+        <a href="#" class="footer-icon me-3" aria-label="Instagram">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="#" class="footer-icon" aria-label="YouTube">
+          <i class="bi bi-youtube"></i>
+        </a>
+      </div>
+
+      <!-- 3. Copyright -->
+      <div class="col-md-4 text-center text-md-end">
+        <small>© 2025 Macon County, NC. All rights reserved.</small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var calendarEl = document.getElementById('calendar');
+  
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        height: 500,
+        events: [
+          {
+            title: 'Town Hall Meeting',
+            start: '2025-04-24T18:00:00',
+          },
+          {
+            title: 'Spring Festival',
+            start: '2025-04-27',
+            end: '2025-04-27'
+          },
+          {
+            title: 'Public Works Open House',
+            start: '2025-05-03T10:00:00'
+          },
+          {
+            title: 'Planning & Zoning Committee',
+            start: '2025-05-10T17:30:00'
+          }
+        ]
+      });
+  
+      calendar.render();
+    });
+  </script>
+  
+</body>
+</html>
